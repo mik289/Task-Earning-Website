@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskEarn - Earn Rewards Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">Task<span>Earn</span></div>
+        <div class="user-stats">
+            <span id="balance-display">Balance: $0.00</span>
+            <button id="withdraw-btn" class="btn-primary">Withdraw</button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="dashboard-container">
+        
+        <!-- Welcome Section -->
+        <section class="welcome-box">
+            <h1>Welcome Back, Earner!</h1>
+            <p>Complete simple tasks below to stack up your earnings daily.</p>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="task-section">
+            <h2>Available Tasks</h2>
+            <div class="task-list" id="task-list">
+                <!-- Dynamic tasks will load here via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cashout Modal -->
+    <div id="withdrawal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Cash Out Earnings</h3>
+            <p>Minimum withdrawal limit is <strong>$10.00</strong>.</p>
+            <div class="input-group">
+                <label for="payout-method">Select Payment Method:</label>
+                <select id="payout-method">
+                    <option value="paypal">PayPal</option>
+                    <option value="crypto">Bitcoin (BTC)</option>
+                    <option value="giftcard">Amazon Gift Card</option>
+                </select>
+            </div>
+            <button id="confirm-withdrawal" class="btn-success">Confirm Cashout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
